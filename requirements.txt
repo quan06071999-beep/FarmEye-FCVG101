@@ -1,0 +1,8 @@
+# tested with Python 3.13 (works with 3.10 - 3.13)
+numpy>=1.26
+opencv-python>=4.8        # SIFT is in the main package since 4.4 (tested with 5.0)
+matplotlib>=3.8
+scikit-learn>=1.4
+tensorflow>=2.16          # Keras 3 (tested with tensorflow-cpu 2.21 / keras 3.15)
+streamlit>=1.35           # tested with 1.67
+pytest>=8                 # optional, for tests/

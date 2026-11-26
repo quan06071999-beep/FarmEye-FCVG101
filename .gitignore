@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+models/*.keras
+outputs/figures/
+outputs/manifest_*.csv
+outputs/*.txt
+!outputs/cli_examples.txt
+report/
+.pytest_cache/
