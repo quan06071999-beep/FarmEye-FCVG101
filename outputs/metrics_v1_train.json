@@ -1,0 +1,159 @@
+{
+  "test_accuracy": 1.0,
+  "test_macro_f1": 1.0,
+  "val_accuracy_best": 1.0,
+  "epochs_run": 17,
+  "train_time_s": 578.8,
+  "params": 289384,
+  "per_class": {
+    "Apple Red 1": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 164.0
+    },
+    "Banana": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 166.0
+    },
+    "Lemon": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 164.0
+    },
+    "Orange": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 160.0
+    },
+    "Pepper Green": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 148.0
+    },
+    "Potato White": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 150.0
+    },
+    "Tomato 1": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 246.0
+    },
+    "Tomato not Ripened": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 158.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      164,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      166,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      164,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      160,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      148,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      150,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      246,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      158
+    ]
+  ],
+  "robustness_accuracy": {
+    "gaussian_noise": 0.9977876106194691,
+    "blur": 0.9682890855457227,
+    "rotate_45": 1.0,
+    "darker": 0.474188790560472
+  },
+  "baseline_hsv_hist_logreg_accuracy": 1.0,
+  "hyperparameters": {
+    "img_size": 64,
+    "batch": 64,
+    "lr": 0.001,
+    "optimizer": "Adam",
+    "loss": "sparse categorical cross-entropy",
+    "max_epochs": 25,
+    "early_stopping_patience": 6,
+    "reduce_lr_patience": 3,
+    "dropout": 0.4,
+    "val_frac": 0.15
+  }
+}

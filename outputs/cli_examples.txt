@@ -1,0 +1,50 @@
+$ python -m app.assistant "is this tomato ripe?" --image data/fruits/Test/Tomato not Ripened/0_100.jpg
+intent = classify (conf 1.00) params = {}
+Classification (CNN) - Prediction: **Tomato not Ripened** (99.9 %). Ripeness: **not ripe yet** – keep on the plant.
+   {'class': 'Tomato not Ripened', 'probability': 0.9995}
+   {'class': 'Pepper Green', 'probability': 0.0005}
+   {'class': 'Banana', 'probability': 0.0}
+
+$ python -m app.assistant "đây là quả gì?" --image data/fruits/Test/Lemon/321_100.jpg
+intent = classify (conf 1.00) params = {}
+Classification (CNN) - Prediction: **Lemon** (100.0 %).
+   {'class': 'Lemon', 'probability': 0.9999}
+   {'class': 'Banana', 'probability': 0.0001}
+   {'class': 'Orange', 'probability': 0.0}
+
+$ python -m app.assistant "khử nhiễu bằng median 7, add salt noise" --image data/samples/fruits.jpg
+intent = filter (conf 1.00) params = {'method': 'median', 'add_noise': 'salt_pepper', 'ksize': 7}
+Filtering / denoising - Applied a median 7x7 filter. Added salt_pepper noise first; best filter here: **median 7x7**.
+   {'filter': 'box 7x7', 'MSE': 0.00196, 'PSNR (dB)': 27.09}
+   {'filter': 'gaussian 7x7', 'MSE': 0.002, 'PSNR (dB)': 26.98}
+   {'filter': 'median 7x7', 'MSE': 0.00127, 'PSNR (dB)': 28.95}
+
+$ python -m app.assistant "match these two photos with ORB, ratio 0.8" --image data/features/box.png --image data/features/box_in_scene.png
+intent = features (conf 0.96) params = {'feat': 'orb', 'ratio': 0.8}
+Feature matching - ORB: 74 matches pass the ratio test (0.8), 58 are geometrically consistent (RANSAC). → **Same object/scene found.**
+   {'method': 'orb', 'kp1': 1589, 'kp2': 1999, 'ratio_matches': 74, 'ransac_inliers': 58, 'inlier_ratio': 0.784}
+
+$ python -m app.assistant "calibrate the camera with these checkerboards" --image data/calib/left01.jpg --image data/calib/left03.jpg --image data/calib/left04.jpg --image data/calib/left05.jpg --image data/calib/left06.jpg
+intent = calibrate (conf 0.89) params = {}
+Camera calibration - Calibrated from your 5 checkerboard photos.
+   {'parameter': 'fx', 'value': 535.57}
+   {'parameter': 'fy', 'value': 535.86}
+   {'parameter': 'cx', 'value': 337.98}
+   {'parameter': 'cy', 'value': 233.48}
+   {'parameter': 'k1, k2, p1, p2, k3', 'value': '-0.2985, 0.1678, 0.0015, -0.0002, -0.1266'}
+   {'parameter': 'RMS reprojection error (px)', 'value': 0.166}
+
+$ python -m app.assistant "how big is this banana? 0.6 mm/px" --image data/fruits/Test/Banana/100_100.jpg
+intent = measure (conf 1.00) params = {'mm_per_px': 0.6}
+Object measurement - Found 1 object(s).
+   {'id': 1, 'area_px': 2389, 'eq_diameter_px': 55.2, 'bbox': [0, 26, 100, 50], 'eq_diameter_mm': 33.1}
+
+$ python -m app.assistant "estimate depth from this stereo pair" --image data/stereo/aloeL.jpg --image data/stereo/aloeR.jpg
+intent = measure (conf 0.93) params = {}
+Depth from stereo - Stereo disparity (SGBM) on the image pair (resized x0.50). Valid pixels: 76 %. Bigger disparity = closer (Z = f·B / d).
+   {'disparity p5 (px)': 23.7, 'disparity p95 (px)': 64.8}
+
+$ python -m app.assistant "hello, can you make me a coffee?" --image data/samples/fruits.jpg
+intent = help (conf 0.00) params = {}
+Help - Sorry, I did not understand. I can: **calibrate** (camera K + undistort), **filter/denoise** (box | gaussian | median), **edges** (Sobel, Canny), **frequency** (FFT low/high-pass), **features** (Harris / SIFT / ORB matching with ratio test), **classify** (CNN + Grad-CAM), **measure** (object size / stereo depth) and **inspect** (classify + measure + edges).
+

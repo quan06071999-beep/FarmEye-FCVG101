@@ -1,0 +1,181 @@
+{
+  "calibration": {
+    "n_images": 13,
+    "n_views_used": 12,
+    "rms_px": 0.23410056216120412,
+    "K": [
+      [
+        534.13,
+        0.0,
+        342.84
+      ],
+      [
+        0.0,
+        534.19,
+        233.72
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "dist": [
+      -0.2759,
+      0.0048,
+      0.0013,
+      0.0,
+      0.1802
+    ],
+    "K_zhang_from_scratch": [
+      [
+        546.67,
+        -1.32,
+        353.79
+      ],
+      [
+        0.0,
+        547.73,
+        233.13
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "per_view_rms_px": [
+      0.195,
+      0.18,
+      0.195,
+      0.152,
+      0.157,
+      0.228,
+      0.233,
+      0.306,
+      0.149,
+      0.187,
+      0.469,
+      0.157
+    ],
+    "rejected_views": {
+      "left02.jpg": 1.22
+    },
+    "rms_before_rejection": 0.40869476588721326,
+    "used_files": [
+      "left01.jpg",
+      "left03.jpg",
+      "left04.jpg",
+      "left05.jpg",
+      "left06.jpg",
+      "left07.jpg",
+      "left08.jpg",
+      "left09.jpg",
+      "left11.jpg",
+      "left12.jpg",
+      "left13.jpg",
+      "left14.jpg"
+    ]
+  },
+  "pinhole_check": {
+    "max_diff_vs_cv2_projectPoints_px": 5.684341886080802e-14,
+    "reprojection_rms_px": 0.1947821673176957,
+    "board_distance_mm": 419.5794066877553
+  },
+  "denoising_mse_psnr": {
+    "gaussian_noise": {
+      "box": [
+        0.00115,
+        29.39
+      ],
+      "gaussian": [
+        0.00086,
+        30.67
+      ],
+      "median": [
+        0.00125,
+        29.04
+      ]
+    },
+    "salt_pepper": {
+      "box": [
+        0.00183,
+        27.38
+      ],
+      "gaussian": [
+        0.00206,
+        26.86
+      ],
+      "median": [
+        0.00081,
+        30.92
+      ]
+    }
+  },
+  "noisy_psnr": {
+    "gaussian_noise": 22.19,
+    "salt_pepper": 17.37
+  },
+  "correlate2d_vs_filter2D_maxdiff": 4.440892098500626e-16,
+  "edges": {
+    "canny_edge_fraction": 0.0329
+  },
+  "frequency": {
+    "lowpass_mse": 0.00177,
+    "ideal_lowpass_mse": 0.00227
+  },
+  "harris_corners_scene": 230,
+  "features": {
+    "sift": {
+      "method": "sift",
+      "kp1": 604,
+      "kp2": 969,
+      "ratio_matches": 80,
+      "ransac_inliers": 75,
+      "inlier_ratio": 0.938
+    },
+    "orb": {
+      "method": "orb",
+      "kp1": 1589,
+      "kp2": 1999,
+      "ratio_matches": 53,
+      "ransac_inliers": 48,
+      "inlier_ratio": 0.906
+    },
+    "my_matcher_vs_bfmatcher": {
+      "mine": 80,
+      "opencv": 80,
+      "same_pairs": 80
+    },
+    "ratio_sweep_sift": {
+      "0.6": [
+        60,
+        59
+      ],
+      "0.7": [
+        73,
+        71
+      ],
+      "0.75": [
+        80,
+        75
+      ],
+      "0.8": [
+        94,
+        79
+      ],
+      "0.9": [
+        174,
+        87
+      ]
+    }
+  },
+  "stereo": {
+    "scale": 0.49921996879875197,
+    "valid_fraction": 0.756,
+    "disp_range_px": [
+      23.0625,
+      71.0
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "classes": [
+    "Apple Red 1",
+    "Banana",
+    "Lemon",
+    "Orange",
+    "Pepper Green",
+    "Potato White",
+    "Tomato 1",
+    "Tomato not Ripened"
+  ],
+  "cleaning_training_folder": {
+    "kept": 4059,
+    "input": 4059
+  },
+  "cleaning_test_folder": {
+    "kept": 1356,
+    "input": 1356
+  },
+  "n_train": 3448,
+  "n_val": 611,
+  "n_test": 1356,
+  "per_class_train": {
+    "Apple Red 1": 418,
+    "Banana": 416,
+    "Lemon": 418,
+    "Orange": 407,
+    "Pepper Green": 377,
+    "Potato White": 382,
+    "Tomato 1": 627,
+    "Tomato not Ripened": 403
+  },
+  "per_class_val": {
+    "Apple Red 1": 74,
+    "Banana": 74,
+    "Lemon": 74,
+    "Orange": 72,
+    "Pepper Green": 67,
+    "Potato White": 68,
+    "Tomato 1": 111,
+    "Tomato not Ripened": 71
+  },
+  "per_class_test": {
+    "Apple Red 1": 164,
+    "Banana": 166,
+    "Lemon": 164,
+    "Orange": 160,
+    "Pepper Green": 148,
+    "Potato White": 150,
+    "Tomato 1": 246,
+    "Tomato not Ripened": 158
+  },
+  "class_weights": {
+    "Apple Red 1": 1.031,
+    "Banana": 1.036,
+    "Lemon": 1.031,
+    "Orange": 1.059,
+    "Pepper Green": 1.143,
+    "Potato White": 1.128,
+    "Tomato 1": 0.687,
+    "Tomato not Ripened": 1.069
+  }
+}
