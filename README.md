@@ -14,7 +14,7 @@ fruit_inspector/
 ├── cv_engine/        calibration.py  filtering.py  features.py  measure.py
 ├── dl/               data_pipeline.py  model.py  train.py
 ├── app/              assistant.py (router + tools, also a CLI)  streamlit_app.py (GUI)
-├── scripts/          run_task1_demo.py  get_fruits_data.py  get_sample_images.py  build_report.py
+├── scripts/          run_task1_demo.py  get_fruits_data.py  get_sample_images.py  cli_examples.sh
 ├── tests/            test_intents.py
 ├── data/             created by the download scripts: calib/ features/ stereo/ samples/ fruits/
 ├── models/           labels.json  calibration.json  (+ fruit_cnn.keras from the Drive link)
